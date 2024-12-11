@@ -1,0 +1,776 @@
+/*================
+	VARIABLES
+================*/
+$main-color-1: #22d1ee;
+$side-color-1: #16b8f3;
+//Màu chủ đạo: #22d1ee
+//Màu phụ: #16b8f3
+//#4FF0FF
+/*================
+	GENERAL
+================*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: white;
+}
+.container {
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1300px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+h2 {
+  font-size: 1.5em;
+  cursor: default;
+}
+h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: default;
+}
+button {
+  color: white;
+}
+/*======================================================  HEADER  ==========================================================================*/
+/*================
+	TOP HEADER
+=================*/
+header {
+  display: block;
+  width: 100%;
+}
+
+#top-header {
+  color: white;
+  background-color: $main-color-1;
+  width: 100%;
+  min-height: 2rem;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5px;
+  }
+}
+
+#header-links {
+  flex: 1 1 200px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  li {
+    list-style: none;
+    padding: 5px 10px 5px 10px;
+  }
+}
+
+/*====================
+	MAIN HEADER
+=====================*/
+.row {
+  background-color: rgb(14, 52, 57);
+  padding: 10px;
+  width: 100%;
+  min-height: 8rem;
+  border-bottom: 3px solid $main-color-1;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+.logo {
+  min-width: 250px;
+  float: left;
+  text-align: center;
+  img {
+    height: 5em;
+    width: 13em;
+  }
+}
+
+.search-bar {
+  flex: 1 1 60%;
+  max-width: 60%;
+  max-height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-cat {
+  select {
+    padding-left: 10px;
+    border: none;
+    border-right: 0.1px solid black;
+    border-radius: 15px 0px 0px 15px;
+    min-width: 6rem;
+    height: 2.5rem;
+    outline: none;
+  }
+}
+.search-brand {
+  select {
+    padding-left: 10px;
+    border: none;
+    border-right: 0.1px solid black;
+    min-width: 4rem;
+    max-width: 7.5rem;
+    height: 2.5rem;
+    outline: none;
+  }
+}
+.search-pro {
+  input[type="text"] {
+    padding-left: 10px;
+    border: none;
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
+    height: 2.5rem;
+    outline: none;
+  }
+}
+.search-btn {
+  button {
+    min-width: 6em;
+    height: 2.5rem;
+    color: white;
+    background-color: $main-color-1;
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      background-color: $main-color-1;
+    }
+  }
+}
+
+.cart,
+.account-btn {
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  margin: 30px 0px;
+  a:hover {
+    color: $main-color-1;
+  }
+}
+
+/*=======
+  MENU
+========*/
+.nav-links {
+  background-color: white;
+  min-height: 7vh;
+  border-bottom: 1px solid rgb(236, 236, 236);
+  align-items: center;
+  font-weight: bold;
+  a {
+    color: black;
+  }
+  li {
+    position: relative;
+    text-align: center;
+    list-style: none;
+    padding: 10px 10px 5px 10px;
+    display: inline-table;
+    &:hover {
+      border-bottom: 0.1em solid $main-color-1;
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  width: 300%;
+  border: 0.1em solid rgb(230, 230, 230);
+  background-color: white;
+  top: 35px;
+  left: 0px;
+  z-index: 999;
+}
+
+/*====================================================== FOOTER ======================================================*/
+footer {
+  position: relative;
+  bottom: 0px;
+  border-top: 3px solid $main-color-1;
+  width: 100%;
+  min-height: 200px;
+  background-color: black;
+  color: white;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+.footer-about,
+.footer-cat,
+.footer-service {
+  flex: 1;
+  h2 {
+    margin-bottom: 10px;
+  }
+  p {
+    padding: 10px 20px;
+  }
+}
+.footer-cat {
+  a {
+    display: inline-block;
+    width: 100px;
+  }
+}
+/*=================================================== TRANG CHỦ =====================================================*/
+
+/*============
+  COLLECTION
+============*/
+.collections {
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.collection-part {
+  width: 350px;
+  height: 230px;
+  margin: 5px;
+  text-align: center;
+  position: relative;
+  border: 0.2px solid rgb(216, 215, 215);
+  overflow: hidden;
+  &:hover img {
+    transform: scale(1.2);
+  }
+  img {
+    flex: 1 1 350px;
+    transition: all 0.7s ease;
+  }
+}
+.collection-background {
+  position: absolute;
+  top: 0px;
+  opacity: 0.9;
+  //Vẽ hình thang
+  border-top: 400px solid $main-color-1;
+  border-left: 0px solid transparent;
+  border-right: 200px solid transparent;
+}
+.collection-name {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: rgb(255, 255, 255);
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  z-index: 2;
+  line-height: 100px;
+}
+
+/*================
+  NEW PRODUCTS
+================*/
+.new {
+  position: relative;
+  width: 90%;
+  margin: 100px auto;
+  overflow: hidden;
+  .show-product {
+    flex: 1 1 25%;
+    min-width: 25%;
+  }
+  #slideImages {
+    display: flex;
+    position: relative;
+    justify-content: start;
+    width: 100%;
+  }
+  h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  #nextBtn,
+  #prevBtn {
+    position: absolute;
+    outline: none;
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    opacity: 0.2;
+    color: black;
+    &:hover {
+      opacity: 0.8;
+      color: $main-color-1;
+      border-color: $main-color-1;
+    }
+  }
+  #nextBtn {
+    margin-right: 10px;
+    top: 50%;
+    right: 0px;
+  }
+  #prevBtn {
+    margin-left: 10px;
+    top: 50%;
+    left: 0px;
+  }
+}
+
+/*==================================================
+					KHUNG SẢN PHẨM
+===================================================*/
+.show {
+  display: flex;
+  justify-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 100px auto;
+  h2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+.show-product {
+  flex: 1 1 25%;
+  min-width: 7rem;
+  max-width: 17rem;
+  min-height: 300px;
+  border-collapse: collapse;
+  border: 0.2px solid rgb(216, 215, 215);
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  overflow: visible;
+  img {
+    width: 80%;
+    max-height: 200px;
+    height: 200px;
+    transition: all 0.7s ease;
+  }
+  &:hover {
+    border: 0.2px solid $main-color-1;
+    img {
+      transform: scale(1.05);
+    }
+  }
+  button {
+    cursor: pointer;
+    background-color: $main-color-1;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    margin: 10px;
+    &:hover {
+      background-color: $side-color-1;
+    }
+  }
+}
+.show-name {
+  height: 40px;
+  width: 70%;
+  margin: 10px auto;
+  overflow: hidden;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+.show-price {
+  overflow: hidden;
+  color: red;
+}
+
+.pages {
+  width: 90%;
+  margin: 50px auto;
+  text-align: center;
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+    font-size: 18px;
+    &:hover {
+      color: $main-color-1;
+      border-bottom: 0.2px solid $main-color-1;
+    }
+  }
+}
+/*=================================================== TRANG DETAIL =====================================================*/
+
+.detail {
+  width: 90%;
+  margin: 100px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: start;
+}
+.detail-image {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  margin-right: 30px;
+  img {
+    transition: all 0.7s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.detail-product {
+  width: 60%;
+  flex: 1 1 60%;
+  h4 {
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  div {
+    padding: 5px 15px;
+  }
+  a {
+    color: red;
+  }
+}
+
+#detail-add-to-cart {
+  input[type="number"] {
+    margin-left: 10px;
+    width: 3rem;
+    height: 2rem;
+    padding-left: 0.2rem;
+    border: 0.2px solid rgb(204, 203, 203);
+  }
+  input[type="submit"] {
+    width: 150px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: $main-color-1;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    color: white;
+  }
+}
+
+/*======================================================   TRANG TÌM KIẾM    =====================================================*/
+
+/*==================================================== TRANG ĐĂNG NHẬP, ĐĂNG KÍ ==============================================================*/
+.account {
+  display: flex;
+  width: 70%;
+  margin: 50px auto;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+}
+.sign-up,
+.sign-in {
+  border-radius: 20px;
+  background-color: white;
+  display: inline-block;
+  width: 50%;
+  flex: 1;
+  border: 1px solid $main-color-1;
+  table {
+    width: 90%;
+    text-align: center;
+    margin: 20px auto;
+    td:nth-child(2) {
+      text-align: left;
+    }
+  }
+  input {
+    &[type="text"],
+    &[type="password"] {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $main-color-1;
+    }
+  }
+  button {
+    outline: none;
+    border: none;
+    padding: 20px;
+    background-color: $main-color-1;
+    border-radius: 20px;
+    &:hover {
+      background-color: $side-color-1;
+    }
+  }
+}
+
+.sign-in {
+  td {
+    padding: 35px 0px;
+  }
+}
+.sign-up {
+  td {
+    padding: 30px 0px;
+  }
+}
+.curtain {
+  position: absolute;
+  right: 0;
+  color: white;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: $main-color-1;
+}
+
+.sign-message {
+  padding: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+.sign-question {
+  color: rgb(255, 0, 0);
+  font-size: 20px;
+}
+.sign-btn {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: white;
+  color: red;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  &:hover {
+    background-color: $side-color-1;
+    color: white;
+  }
+}
+
+/*=================================================== TRANG QUẢN LÍ TÀI KHOẢN =====================================================*/
+.account-holder {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  padding: 20px;
+  min-height: 400px;
+  text-align: center;
+  align-items: center;
+}
+.account-menu {
+  background-color: rgb(235, 235, 235);
+  display: block;
+  float: left;
+  width: 20%;
+  height: 100%;
+  text-align: left;
+  ul {
+    list-style: none;
+  }
+  li {
+    padding: 40px 10px 10px;
+  }
+  a {
+    color: black;
+  }
+  a:hover {
+    color: $main-color-1;
+    border-bottom: 0.2px solid $main-color-1;
+  }
+}
+.account-info {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  table {
+    margin: 10px auto;
+  }
+  td:nth-child(2) input {
+    min-width: 500px;
+    margin: 20px 0px;
+    padding: 7px;
+  }
+  button {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background-color: $main-color-1;
+    color: white;
+    padding: 10px;
+    &:hover {
+      background-color: $side-color-1;
+    }
+  }
+}
+/*=================================================== TRANG QUẢN LÍ ĐƠN HÀNG =====================================================*/
+.invoice-info {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  table {
+    position: relative;
+    margin: 30px auto;
+    border-collapse: collapse;
+  }
+  th {
+    position: sticky;
+    top: 0px;
+    max-width: 250px;
+    border-left: 1px solid white;
+    padding: 10px;
+    background-color: $main-color-1;
+    color: white;
+  }
+  td {
+    max-width: 250px;
+
+    border: 1px dashed $main-color-1;
+    padding: 10px;
+    height: 80px;
+    //Cột tên sản phẩm
+    &:nth-child(2) {
+      text-align: left;
+    }
+  }
+  a {
+    color: black;
+    &:hover {
+      color: $main-color-1;
+    }
+  }
+}
+.invoice-detail {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  table {
+    margin: 50px auto;
+    text-align: left;
+  }
+  th{
+    color: $main-color-1;
+  }
+  th,
+  td {
+    max-width: 210px;
+    min-width: 100px;
+    overflow: visible;
+    padding: 10px;
+    margin: 10px;
+    &:nth-child(3) {
+      text-align: center;
+    }
+  }
+  a {
+    color: black;
+    &:hover {
+      color: $main-color-1;
+      font-weight: bold;
+    }
+  }
+}
+
+/*=================================================== GIỎ HÀNG =====================================================*/
+.cart-holder {
+  width: 100%;
+  margin: auto;
+  background-color: $main-color-1;
+  display: flex;
+  height: auto;
+  button {
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    min-width: 200px;
+    background-color: $main-color-1;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    &:hover {
+      background-color: $side-color-1;
+    }
+  }
+  h2 {
+    margin-bottom: 50px;
+  }
+}
+.shipping-info {
+  width: 55%;
+  padding: 50px;
+  background-color: white;
+  height: inherit;
+  table {
+    width: 100%;
+    margin: 10px auto;
+  }
+  td {
+    padding: 10px;
+  }
+  input {
+    width: 100%;
+    padding-left: 10px;
+    height: 30px;
+    outline: none;
+  }
+  textarea {
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    outline: none;
+    resize: none;
+  }
+  h6 a{
+      color: $main-color-1;
+      &:hover{
+        color: $side-color-1;
+      }
+  }
+}
+.shipping-cart {
+  width: 40%;
+  height: inherit;
+  margin: 30px auto 0px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+  table {
+    margin: 30px auto;
+    text-align: left;
+    // overflow: auto;
+  }
+  td {
+    max-width: 400px;
+    padding: 10px;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+  h4{
+      margin: 100px auto;
+  }
+}
+#cart-delete:hover {
+  background-color: red;
+}
